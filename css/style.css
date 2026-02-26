@@ -1,0 +1,242 @@
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #c4def5;  
+    font-family: "Funnel Sans", "Roboto" sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+
+}
+
+.container-fluid { width: 100%;}
+
+.glow-pink-bg{
+  margin: 0;
+  /* Dark background color provided */
+  background-color: #1c1e2b;
+  
+  /* Glowing effects coming from the left and right sides */
+  background-image: 
+    radial-gradient(circle at 0% 50%, rgba(246, 151, 222, 0.25) 0%, transparent 40%),
+    radial-gradient(circle at 100% 50%, rgba(246, 151, 222, 0.25) 0%, transparent 40%);
+  
+  background-attachment: fixed;
+
+}
+
+@media (min-width: 768px) {
+  .container-fluid { width: 750px; }
+  .card-img-top {width:20%;}
+  .grocery-pic {width:20%;}
+  .flex-wrap{
+    flex-wrap: wrap;
+  }
+}
+
+/* Desktop and up (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .container-fluid { width: 970px; }
+  .card-img-top {width:20%;}
+  .grocery-pic {width:20%;}
+  .flex-wrap{
+    flex-wrap: wrap;
+  }
+}
+
+.nav-bg {
+    background: #1C1E2B;
+    background: linear-gradient(0deg, rgba(28, 30, 43, 1) 5%, rgba(189, 230, 255, 1) 11%);
+}
+.name-sec {
+    width: 100%;
+    background-color: #1c1e2b;
+
+    /* Stack order: Pink Glow (Top) -> Dark Fade (Middle) -> Image (Bottom) */
+    background-image: 
+        /* 1. Pink Glow from the left */
+        radial-gradient(circle at 0% 50%, rgba(246, 151, 222, 0.25) 0%, transparent 50%),
+        
+        /* 2. Linear blend to transition the background into the image */
+        linear-gradient(to right, #1c1e2b 30%, transparent 70%),
+        
+        /* 3. The DNA background image on the right */
+        url('../img/dna-bg.png');
+
+    /* Shared properties for all layers */
+    background-position: 
+        left center,   /* Glow position */
+        center center, /* Gradient position */
+        right center;  /* Image position */
+
+    background-size: 
+        100% 100%,     /* Glow spread */
+        100% 100%,     /* Gradient spread */
+        65%;           /* DNA image size */
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.main-pg-btn:hover{
+    color:#1c1e2b;
+}
+
+.glow-text {
+    color: #e3f2fd;
+    text-shadow: 0 0 8px rgba(227, 242, 253, 0.8);
+}
+
+.main-pg-btn 
+.glow-text:hover{
+    color:#1c1e2b;
+}
+
+.pink-txt{
+    color: #fafafa;
+    text-shadow: 0 0 8px rgba(189, 14, 248, 0.8);
+} 
+
+/* .pink-squares{
+    background-image: url(../img/pink\ squares.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size:contain;
+    height: 400px;
+} */
+
+.tools {
+    list-style-type: none;
+}
+
+.tool-img {
+    height: 30px;
+    width: 30px;
+}
+
+.news-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.news-ticker {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 15s linear infinite;
+    padding-left: 50px;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* 1. Apply the gradient to the main container */
+.accordion {
+    background: #c4def5;
+    background: radial-gradient(circle, rgba(196, 222, 245, 1) 0%, rgb(246, 151, 222)  100%);
+    border-radius: 8px;
+    overflow: hidden;
+    /* Keeps the corners clean */
+    padding: 5px;
+    /* Optional: adds a little space around items */
+}
+
+.accordion-item,
+.accordion-button,
+.accordion-body {
+    background-color: transparent !important;
+    color: white !important;
+    /* Makes text readable on the colorful background */
+}
+
+
+/* 4. Fix the arrow icon color to white */
+.accordion-button::after {
+    filter: brightness(0) invert(1);
+}
+
+.accordion-button {
+    font-family: 'Your-Font-Name', sans-serif;
+    /* Change font here */
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #310174 !important;
+
+    /* Slight shadow for readability */
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.3);
+}
+
+.accordion-body {
+    font-family: 'Your-Secondary-Font', serif;
+    /* Change font here */
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ffffff;
+
+    /* Softer shadow for longer text */
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.accordion-button:not(.collapsed) {
+    color: #e3f2fd !important;
+    /* Uses your lightest blue color from earlier */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    /* Adds a slight glow when active */
+}
+
+.radial-pink-bg {
+    background: #C4DEF5;
+    background: radial-gradient(circle, rgba(196, 222, 245, 1) 0%, rgb(246, 151, 222) 100%);
+}
+
+
+.glow-text-pink {
+    color: #491198;
+    text-shadow: 0 0 8px rgba(227, 242, 253, 0.8);
+}
+
+
+.raise-and-show-effect {
+    transition: transform 0.3s ease, z-index 0.3s ease, top 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+}
+
+.raise-and-show-effect:hover {
+    z-index: 10;
+    top: -0.5px;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section {
+  animation: reveal linear forwards;
+  animation-timeline: view(); /* Starts when element enters viewport */
+  animation-range: entry 0% cover 40%; /* Customizes the "slow" fade speed */
+}
+
+@media (max-width: 768px) {
+    .name-sec {
+        background-size: 100% 100%, 100% 100%, 100%; /* Make image full width on mobile */
+        background-image: 
+            radial-gradient(circle at 50% 0%, rgba(246, 151, 222, 0.2) 0%, transparent 70%),
+            linear-gradient(to bottom, #1c1e2b 20%, transparent 80%),
+            url('../img/dna-bg.png');
+    }
+}
