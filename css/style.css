@@ -86,9 +86,11 @@ body {
     background-attachment: fixed;
 }
 
-
-.main-pg-btn:hover{
-    color:#1c1e2b;
+.main-pg-btn{
+    color: inherit;
+    text-shadow: 0 0 8px rgba(227, 242, 253, 0.8);
+    transition: all 0.3s ease;
+    pointer-events: none;
 }
 
 .glow-text {
@@ -96,8 +98,7 @@ body {
     text-shadow: 0 0 8px rgba(227, 242, 253, 0.8);
 }
 
-.main-pg-btn 
-.glow-text:hover{
+.main-pg-btn :hover{
     color:#1c1e2b;
 }
 
@@ -197,6 +198,17 @@ body {
     /* Uses your lightest blue color from earlier */
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
     /* Adds a slight glow when active */
+}
+
+.contct-txt{
+    width:30%;
+    margin-right: 1.5rem;
+    margin-top: 1rem;
+}
+
+
+.cntct-img{
+    width: 50%;
 }
 
 .radial-pink-bg {
